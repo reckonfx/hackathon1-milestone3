@@ -1,53 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Builder , Milestone-3</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Dynamic Resume Builder</h1>
-    <form action="" id="resumeForm">
-        <!-- ----------------personal Information -------------------------- -->
-        <fieldset id="personalInformation">
-            <legend>Personal Information</legend>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter Your Name" required><br>
-            <label for="email">Email</label>
-            <input type="email" name="" id="email" placeholder="Enetr your Email Address" required><br>
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 100px 25%;
+    /* background-color: yellow; */
+    /* background: linear-gradient(75deg, black,45%, gold); */
+}
+#resumeForm{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    border-radius: 20px;
+    width: 910px;
+    box-shadow: 1px 1px 30px rgb(36, 36, 33);
+    margin-top: 50px;
 
-        </fieldset>
-        <!-- ---------------------education--------------------------------- -->
-        <fieldset class="education">
-            <legend >Education</legend>
-            <label for="education"></label>
-            <textarea name="education" id="education" rows="5" placeholder="Enter your Education" required></textarea>
-        </fieldset>
-        <!-- --------------------Experience information ---------------------->
-         <fieldset class="experience">
-            <legend>Experience</legend>
-            <label for="experience"></label>
-            <textarea name="experience" id="experience" rows="10" placeholder="Enter your Experience" required></textarea>
-         </fieldset>
-         <!-- --------------------skills---------------------------------- -->
-          <fieldset class="skills">
-            <legend>Skills</legend>
-            <label for="skills"></label>
-            <textarea name="skills" id="skills" rows="10" placeholder="Enter your Skills" required></textarea>
-          </fieldset>
-          <button type="submit">Generate Resume</button>
-    </form>
-    <br>
-    <!--------------------------- Dynamic Resume ------------------------>
-    <div id="resumeDisplay" >
-        <!-- resume will be generated in this div -->
-    </div>
-    <footer>
-        Created By Aamir Ahmed Shamsi roll # 00486031
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+}
+h1{
+    width: 850px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    color: blue;
+    box-shadow: 2px 2px 10px grey;
+    font-size: 70px;
+    font-weight: 800;
+    margin: 20px;
+   
+}
+#resumeForm input{
+    font: 30px;
+}
+#personalInformation{
+    width: 900px;
+    height:500px ;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    
+}
+#personalInformation legend{
+    text-align: center;
+    
+}
+#personalInformation input{
+    margin: 20px;
+}
+#name,#email,#phone{
+    font-size: 22px;
+    width: 500px;
+    height: 35px;
+}
+.education, .experience, .skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.education legend, .experience legend, .skills legend{
+    /* height: 200px; */
+    text-align: center;
+    margin: 30px;
+}
+.education textarea, .experience textarea, .skills textarea{
+    width: 800px;
+    height: 300px;
+    font-size: 25px;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: center;
+
+}
+button{
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px grey;
+    position: relative;
+    left: 300px;
+}
+button:hover{
+    background-color: grey;
+    box-shadow: 5px 5px 20px rgb(60, 60, 60);
+}
+#resumeDisplay{
+ width: 850px;
+ height: 900px;
+ border: 2px solid black;
+ font-size: 30px;
+ line-height: 30px;
+ text-align: left;
+ margin: 20px;
+ padding: 20px;
+ border-radius: 20px;
+}
+#resumeDisplay h1{
+    width: 90%;
+    height: 50px;
+    padding: 20px;
+    font-size: 60px;
+    border-radius: 20px;
+    /* text-align: center; */
+}
+footer{
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+
+
+
+
